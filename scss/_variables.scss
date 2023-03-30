@@ -1,0 +1,40 @@
+$primary-color: #f6f6f6;
+$secondary-color: #ffffff;
+$footer-color: #4d4d4d;
+
+
+$animation-colors: (
+    'purple': #9356DC,
+    'pink' :#FF79DA,
+    'cyan' : #99E2D0
+);
+$font-families: (
+  'logo': (
+    'font-family': 'Shrikhand, cursive',
+    'font-style': normal,
+    'font-size' : 48px 
+  ),
+  'headers': (
+    'font-family': 'Roboto, sans-serif',
+    'font-weight': bold,
+  )
+);
+
+@function font-style($font){
+    @return map-get($font-families, $font )
+}
+
+
+
+@function colorSelector($color) {
+    @return map-get($map: $animation-colors, $key: $color)
+}
+$font-weights : (
+    'regular': 100,
+    'bold' : bold
+);
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name)
+}
+
